@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy 18th Birthday</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bg" aria-hidden="true">
+  <svg id="defs" width="0" height="0" style="position:absolute"></svg>
+  <svg class="hills" viewBox="0 0 400 100" preserveAspectRatio="none">
+    <path d="M0 55Q60 20 130 45T260 38T400 42V100H0Z" fill="#B1D095" opacity=".75"/>
+    <path d="M0 70Q80 40 170 62T330 58T400 62V100H0Z" fill="#99BC77" opacity=".85"/>
+    <path d="M0 85Q100 62 200 80T400 76V100H0Z" fill="#759A53"/>
+  </svg>
+</div>
+<div id="bar"><button class="b" id="mus">♪ Play music</button></div>
+
+<!-- BACKGROUND SONG: put your song file in this same folder and type its file name in src="..." below -->
+<audio id="bgm" src="sinisigaw.m4a" loop preload="auto"></audio>
+
+<section id="home" class="screen on">
+  <h1>Happy 18th Birthday</h1>
+  <div id="stage">
+    <button id="cake" aria-label="Light the 18 candles">
+      <svg id="svg" viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="200" cy="322" rx="192" ry="40" fill="#BEC9B2"/>
+        <ellipse cx="200" cy="318" rx="176" ry="32" fill="#CFD8AC"/>
+        <path d="M55 235V320A145 30 0 0 0 345 320V235Z" fill="#759A53"/>
+        <path d="M55 235V255A145 30 0 0 0 345 255V235Z" fill="#D7EDD8"/>
+        <g id="g1"></g><g id="g0"></g>
+        <ellipse cx="200" cy="235" rx="145" ry="30" fill="#CFD8AC" stroke="#B1D095" stroke-width="2"/>
+        <path d="M95 150V232A105 26 0 0 0 305 232V150Z" fill="#99BC77"/>
+        <path d="M95 150V170A105 26 0 0 0 305 170V150Z" fill="#D7EDD8"/>
+        <g id="g2"></g>
+        <ellipse cx="200" cy="150" rx="105" ry="26" fill="#E9F6E6" stroke="#B1D095" stroke-width="2"/>
+        <g id="g3"></g>
+      </svg>
+    </button>
+  </div>
+  <p id="hint">Tap the cake to light the candles</p>
+</section>
+
+<section id="letter" class="screen">
+  <h2>A letter for you</h2>
+  <article id="paper">
+    <!-- 1) Change the name below -->
+    <h2 id="to">For my love</h2>
+
+    <!-- 2) WRITE YOUR LETTER INSIDE THIS <p>. Press Enter for a new line, leave an empty line for a new paragraph. -->
+    <p id="msg">
+Happy 18th birthday My Dearest, Rensii
+
+Another milestone in your life, and I am so proud of you. You've been through a lot mahal ko, but 
+those experiences made a great lady you are now. I am so lucky for letting me into your life, there are some 
+circumstances that we had misunderstandings but it just made us more stronger. For some people, november is just
+another month but for me, it's the month where the love of my life was born. The month where we let each other know
+what is our true feelings. You thought these year will be like the same but it will not mahal ko—this time it will be better on so 
+many ways. I don't have many wishes for you, I only have 3 things that I always wish for to you. First is no one will cause you any harm.
+Second is you always have your happines. Lastly is continue on being you, and don't let anyone change the woman you are. 
+I love you mahal ko, I promise to be with you and only you,more birthdays to come and we will celebrate together. Mahal na mahal kita lagpas pa sa buong kalawakan.
+
+Love,
+Future Hubby♡♡♡
+    </p>
+
+    <div class="row"><button class="b" id="next">See our memories</button></div>
+  </article>
+</section>
+
+<section id="mem" class="screen">
+  <h2>Our favorite moments</h2>
+
+  <!-- PHOTOS: put your pictures in a folder named "photos" next to this file, then list them below.
+       One <img> line = one photo. Every 4 photos make one photobooth strip. Add or delete lines as you like.
+       Change the caption under each strip with data-caption="..." -->
+  <div id="photo-list" data-caption="Happy 18th" hidden>
+    <img src="one.jpg" alt="">
+    <img src="two.JPG" alt="">
+    <img src="three.jpg" alt="">
+    <img src="four.JPG" alt="">
+    <img src="five.jpg" alt="">
+    <img src="six.JPG" alt="">
+    <img src="seven.jpg" alt="">
+    <img src="eight.jpg" alt="">
+  </div>
+  <div id="strips"></div>
+
+  <!-- VIDEO: put your video file in this same folder and type its file name in src="...".
+       If you do not want a video, delete the whole <figure> below. -->
+  <figure id="vf">
+    <video 
+        id="v" 
+        src="VIDEO.mp4" 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        preload="auto">
+    </video>
+</figure>
+
+  <div class="row"><button class="b ghost" id="back">Back to letter</button></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
